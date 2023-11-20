@@ -1,0 +1,146 @@
+{
+	"info": {
+		"_postman_id": "e35eaa27-adb7-4715-9300-5c824165a40a",
+		"name": "Task Manager",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9019226",
+		"_collection_link": "https://warped-capsule-930821.postman.co/workspace/Tieto~1ec527c9-e419-427a-b0d5-2884bc6e8596/collection/9019226-e35eaa27-adb7-4715-9300-5c824165a40a?action=share&creator=9019226&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Get all tasks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3001/tasks",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create new tasks",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"New task airtribe\",\r\n    \"description\": \"New desc airtribe\",\r\n    \"flag\": true,\r\n    \"priority\": \"low\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3001/tasks",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Task by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3001/tasks/6",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"tasks",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update tasks",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"priority\":\"medium\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3001/tasks/6",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"tasks",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete task",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3001/tasks/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"tasks",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "priority based",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "query based",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "error request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
